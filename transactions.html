@@ -1,0 +1,52 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Transactions {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <script>
+    
+    document.getElementById("write").innerHTML = window.location.search;
+
+    </script>
+
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
+      <div class="d-block mb-4 mb-md-0">
+          <h2 class="h4">Results </h2>
+          <p class="mb-0">Prediction of LSTM model</p>
+          <p></p>
+          <p class="mb-0">Region Abbreviations: </p>
+          <ul>
+            <li>NSW: New South Wales</li>
+            <li>NL: Northern Territory</li>
+            <li>QL: Queensland</li>
+            <li>SA: Southern Australia</li>
+            <li>TA: Tasmania</li>
+            <li>VI: Victoria</li>
+            <li>WA: Western Australia</li>
+           </ul>
+      </div>
+  </div>
+
+  <p id = "results"></p>
+  
+  <script>
+    
+   //  document.getElementById("address").innerHTML = window.location.search;
+    add = window.location.search
+    parsed = add.slice(1, add.length)
+    results = parsed.split("&")
+    region = results[0].split("=")[1]
+    startDate = results[1].split("=")[1]
+    days = results[2].split("=")[1].split("+")[0] + " " + results[2].split("=")[1].split("+")[1]
+
+    document.getElementById("results").innerHTML = "Region: " + region + " | Start Date: " + startDate +
+    " | Forecasting Range: " + days 
+    
+  </script>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
