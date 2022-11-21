@@ -1,0 +1,66 @@
+<style>
+    .content {
+      display: flex;
+      margin: 82px auto 32px;
+      padding: 0 16px;
+      max-width: 960px;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+  </style>
+
+<h1>{{title}}</h1>
+
+<form action="/app.component.html" method="get">
+  <label for="regions">Region:</label>
+  <input list="regionList"  id = "rl" name="regionList" formControlName="regionList" required/>
+  <datalist id="regionList">
+      <option value="NSW">
+      <option value="NT">
+      <option value="QL">
+      <option value="SA">
+      <option value="TA">
+      <option value="VI">
+      <option value="WA"></option>
+  </datalist>
+  <label for="start">Start date:</label>
+  <input type="date" id="start" name="trip-start"
+      value="2017-09-13"
+      min="2005-01-04" max="2017-09-13">
+  <label for="forecastDays"> Forecasting Range:</label>
+  <input list="forecastList" id = "fl" name="forecastList"/>
+  <datalist id="forecastList">
+      <option value="5 days">
+      <option value="1 week">
+      <option value="2 weeks">
+      <option value="1 month">
+      <option value="6 months"></option>
+  </datalist>
+
+  <input type="submit" value="Submit">
+</form>
+<p>
+    {{input1}}:
+    <label id = "region"></label>
+    <br>
+    {{input2}}:
+    <label id = "start_date">{{input2}}</label>
+    <br>
+    {{input3}}:
+    <label id = "range">{{input3}}</label>
+</p>
+<script>
+    add = window.location.search
+    parsed = add.slice(1, add.length)
+    results = parsed.split("&")
+    region = results[0].split("=")[1]
+    startDate = results[1].split("=")[1]
+    days = results[2].split("=")[1].split("+")[0] + " " + results[2].split("=")[1].split("+")[1]
+
+    document.getElementById("region").innerHTML = region
+    document.getElementById("start_date").innerHTML = startDate
+    document.getElementById("range").innerHTML = days
+</script>
+
+
