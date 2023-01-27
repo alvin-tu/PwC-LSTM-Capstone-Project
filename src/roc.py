@@ -17,7 +17,7 @@ from sklearn.metrics import roc_auc_score, roc_curve
 """
     Parameters: 
     y_true: true binary labels of fire/no fire
-    y_pred: probability estimate of the 
+    y_pred: predictions from model
 """
 
 def plot_roc_curve(y_true, y_pred):
