@@ -82,17 +82,6 @@ function initMap() {
           this.div.style.height = sw.y - ne.y + "px";
         }
       }
-      
-      /**
-       * The onRemove() method will be called automatically from the API if
-       * we ever set the overlay's map property to 'null'.
-       */
-      onRemove() {
-        if (this.div) {
-          this.div.parentNode.removeChild(this.div);
-          delete this.div;
-        }
-      }
     
       /**
        *  Set the visibility to 'hidden' or 'visible'.
