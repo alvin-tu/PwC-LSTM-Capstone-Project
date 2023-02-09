@@ -1,15 +1,35 @@
 function initMap() {
+/*
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 6,
     center: { lat: 36.7783, lng: -119.4179 },
-    mapTypeId: "roadmap",
+    mapTypeId: "satellite",
   });
+*/
+  var container = document.getElementById('map');
+  var mapOptions = {
+    zoom: 6,
+    center: new google.maps.LatLng(36.7783, -119.4179),
+    styles: [{
+      stylers: [{
+        saturation: -100
+      }]
+    }]
+  };
+
+  const map = new google.maps.Map(container, mapOptions);
+  
   const bounds = new google.maps.LatLngBounds(
-    new google.maps.LatLng(32.742, -124.404),
-    new google.maps.LatLng(41.404, -114.737)
+    new google.maps.LatLng(32.535, -124.413), //sw
+    new google.maps.LatLng(41.998, -114.123) //ne
   );
+  
+
   //just use random png for now
-  let image = "https://raw.githubusercontent.com/shuyashou/webpage_images/main/flare.png";
+  //let image = "https://raw.githubusercontent.com/shuyashou/webpage_images/main/flare.png";
+  let image = "https://raw.githubusercontent.com/shuyashou/webpage_images/main/pred_crop.png"
+  //let image = "https://raw.githubusercontent.com/shuyashou/webpage_images/main/pred.png"
+  
 
   //image += "examples/full/images/talkeetna.png";
   class USGSOverlay extends google.maps.OverlayView {
@@ -35,8 +55,8 @@ function initMap() {
       const img = document.createElement("img");
 
       img.src = this.image;
-      img.style.width = "10%";
-      img.style.height = "10%";
+      img.style.width = "100%";
+      img.style.height = "100%";
       img.style.position = "absolute";
       this.div.appendChild(img);
 
