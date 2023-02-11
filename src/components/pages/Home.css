@@ -1,0 +1,25 @@
+.next {
+    padding: 4rem;
+    background: #fff;
+  }
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    margin:0;
+    padding:0;
+}
+
+.problem {
+    margin-bottom: 70px;
+}
+
+.us {
+    text-align: center;
+}

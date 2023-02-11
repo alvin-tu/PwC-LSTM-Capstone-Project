@@ -1,0 +1,57 @@
+/* const Card = ({ description, imageUrl, text }) => (
+    <div style={{ display: "flex", width: "1000px", margin: "2em" }}>
+      <div style={{ width: "100%", paddingTop: "7em"}}>
+        <p style={{ width: "500px", margin: 0, fontSize: "1.2em" }}>{text}</p>
+      </div>
+      <div style={{ width: "100%",  border: "3px solid black", borderRadius: "10px", overflow: "hidden" }}>
+        <img src={imageUrl} style={{ width: "500px", height: "400px" }} />
+        <p style={{ margin: "0", fontSize: "1.2em" }}>{description}</p>
+      </div>
+    </div>
+  );
+
+export default function About() {
+    return (
+    <div>
+        <h1 className='about'>Using the Prediction Model</h1>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <Card description="Data" imageUrl='photos/kirby.jpeg' text="TODO: FILL IN" />
+            <Card description="How to Use" imageUrl='photos/kirby.jpeg' text="TODO: FILL IN" />
+            <Card description="Example Results" imageUrl='photos/kirby.jpeg' text="TODO: FILL IN" />
+        </div>
+    </div>
+    ); */
+
+    .about__card {
+        display: flex;
+        width: 1000px;
+        margin: 2em;
+    }
+
+    .about__text__container {
+        width: 100%;
+        padding-top: 7em;
+    }
+
+    .about__text {
+        width: 500px;
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    .about__image__container {
+        width: 100%;
+        border: 3px solid black;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .about__image {
+        width: 500px;
+        height: 400px;
+    }
+
+    .about__image__text {
+        margin: 0;
+        font-size: 1.2em;
+    }
