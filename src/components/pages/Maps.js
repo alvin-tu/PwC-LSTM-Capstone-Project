@@ -82,7 +82,7 @@ const Maps = ({ lat, lng, year }) => {
 
     useEffect(() => {
         const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAtfRLJMpw9tC88mk0fwFo-ksfUJowYNWg`;
+        script.src = `https://maps.googleapis.com/maps/api/js?key={INPUT YOUR OWN KEY}`;
         script.async = true;
         script.onload = () => {
             const map = new window.google.maps.Map(mapRef.current, {
