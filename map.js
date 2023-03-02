@@ -1,107 +1,128 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-import data from './results.json';
+// import data from './results.json';
+import data04 from './2014_predictions/reduced_coordinates_04.json';
+import data02 from './2014_predictions/reduced_coordinates_02.json';
+import data008 from './2014_predictions/reduced_coordinates_008.json';
+import data006 from './2014_predictions/reduced_coordinates_006.json';
+import data004 from './2014_predictions/reduced_coordinates_004.json';
+import data002 from './2014_predictions/reduced_coordinates_002.json';
+import data00 from './2014_predictions/reduced_coordinates_00.json';
+
 
 const handleApiLoaded = (map, maps) => {
-    // Total number of results is 410537, set to 1 for fast loading when editing
-    for(let i=0; i < 410537; i+=2){
-        const probability = parseFloat(data[i]['2014_fire_prob']);
-        const latitude = parseFloat(data[i]['Latitude']);
-        const longitude = parseFloat(data[i]['Longitude']);
-        const rectangleCoords = [
-            { lat: latitude + 0.00904372, lng: longitude + (1.0/(111.320*Math.cos(latitude*(Math.PI/180)))) },
-            { lat: latitude + 0.00904372, lng: longitude - (1.0/(111.320*Math.cos(latitude*(Math.PI/180)))) },
-            { lat: latitude - 0.00904372, lng: longitude - (1.0/(111.320*Math.cos(latitude*(Math.PI/180)))) },
-            { lat: latitude - 0.00904372, lng: longitude + (1.0/(111.320*Math.cos(latitude*(Math.PI/180)))) },
-            { lat: latitude + 0.00904372, lng: longitude + (1.0/(111.320*Math.cos(latitude*(Math.PI/180)))) }
-        ];
-        if( probability > 0.04 ){
-            var rectangle = new maps.Polygon({
-                paths: rectangleCoords,
-                strokeColor: "#FF0000",
-                strokeOpacity: 0,
-                strokeWeight: 0,
-                fillColor: "#FF0000",
-                fillOpacity: 0.35
-            });
-            rectangle.setMap(map);
+    for(let i=0; i < data04.length; i++){
+        let polygonCoords = []
+        for(let j = 0; j < data04[i].length; j++){
+            polygonCoords.push({ lat: data04[i][j][1], lng: data04[i][j][0]})
+            
         }
-        else if( (0.04 >= probability) && (probability > 0.02) ){
-            var rectangle = new maps.Polygon({
-                paths: rectangleCoords,
-                strokeColor: "#FF0000",
-                strokeOpacity: 0,
-                strokeWeight: 0,
-                fillColor: "#FF3800",
-                fillOpacity: 0.35
-            });
-            rectangle.setMap(map);
+        var rectangle = new maps.Polygon({
+            paths: polygonCoords,
+            strokeColor: "#FF0000",
+            strokeOpacity: 0.5,
+            strokeWeight: 1,
+            fillColor: "#FF0000",
+            fillOpacity: 0.35
+        });
+        rectangle.setMap(map);
+    }  
+    for(let i=0; i < data02.length; i++){
+        let polygonCoords = []
+        for(let j = 0; j < data02[i].length; j++){
+            polygonCoords.push({ lat: data02[i][j][1], lng: data02[i][j][0]})
+            
         }
-        else if( (0.02 >= probability) && (probability > 0.008) ){
-            var rectangle = new maps.Polygon({
-                paths: rectangleCoords,
-                strokeColor: "#FF0000",
-                strokeOpacity: 0,
-                strokeWeight: 0,
-                fillColor: "#FF6500",
-                fillOpacity: 0.35
-            });
-            rectangle.setMap(map);
+        var rectangle = new maps.Polygon({
+            paths: polygonCoords,
+            strokeColor: "#ff8000",
+            strokeOpacity: 0.5,
+            strokeWeight: 1,
+            fillColor: "#ff8000",
+            fillOpacity: 0.35
+        });
+        rectangle.setMap(map);
+    }   
+    for(let i=0; i < data008.length; i++){
+        let polygonCoords = []
+        for(let j = 0; j < data008[i].length; j++){
+            polygonCoords.push({ lat: data008[i][j][1], lng: data008[i][j][0]})
+            
         }
-        else if( (0.008 >= probability) && (probability > 0.006) ){
-            var rectangle = new maps.Polygon({
-                paths: rectangleCoords,
-                strokeColor: "#FF0000",
-                strokeOpacity: 0,
-                strokeWeight: 0,
-                fillColor: "#FF8700",
-                fillOpacity: 0.35
-            });
-            rectangle.setMap(map);
+        var rectangle = new maps.Polygon({
+            paths: polygonCoords,
+            strokeColor: "#ffff00",
+            strokeOpacity: 0.5,
+            strokeWeight: 1,
+            fillColor: "#ffff00",
+            fillOpacity: 0.35
+        });
+        rectangle.setMap(map);
+    }  
+    for(let i=0; i < data006.length; i++){
+        let polygonCoords = []
+        for(let j = 0; j < data006[i].length; j++){
+            polygonCoords.push({ lat: data006[i][j][1], lng: data006[i][j][0]})
+            
         }
-        else if( (0.006 >= probability) && (probability > 0.004) ){
-            var rectangle = new maps.Polygon({
-                paths: rectangleCoords,
-                strokeColor: "#FF0000",
-                strokeOpacity: 0,
-                strokeWeight: 0,
-                fillColor: "#FFa900",
-                fillOpacity: 0.35
-            });
-            rectangle.setMap(map);
+        var rectangle = new maps.Polygon({
+            paths: polygonCoords,
+            strokeColor: "#40ff00",
+            strokeOpacity: 0.5,
+            strokeWeight: 1,
+            fillColor: "#40ff00",
+            fillOpacity: 0.35
+        });
+        rectangle.setMap(map);
+    } 
+    for(let i=0; i < data004.length; i++){
+        let polygonCoords = []
+        for(let j = 0; j < data004[i].length; j++){
+            polygonCoords.push({ lat: data004[i][j][1], lng: data004[i][j][0]})
+            
         }
-        else if( (0.004 >= probability) && (probability > 0.002) ){
-            var rectangle = new maps.Polygon({
-                paths: rectangleCoords,
-                strokeColor: "#FF0000",
-                strokeOpacity: 0,
-                strokeWeight: 0,
-                fillColor: "#FFec00",
-                fillOpacity: 0.35
-            });
-            rectangle.setMap(map);
+        var rectangle = new maps.Polygon({
+            paths: polygonCoords,
+            strokeColor: "#00ffff",
+            strokeOpacity: 0.5,
+            strokeWeight: 1,
+            fillColor: "#00ffff",
+            fillOpacity: 0.35
+        });
+        rectangle.setMap(map);
+    }  
+    for(let i=0; i < data002.length; i++){
+        let polygonCoords = []
+        for(let j = 0; j < data002[i].length; j++){
+            polygonCoords.push({ lat: data002[i][j][1], lng: data002[i][j][0]})
+            
         }
-        else{
-            var rectangle = new maps.Polygon({
-                paths: rectangleCoords,
-                strokeColor: "#FF0000",
-                strokeOpacity: 0,
-                strokeWeight: 0,
-                fillColor: "#ADFF00",
-                fillOpacity: 0.35
-            });
-            rectangle.setMap(map);
+        var rectangle = new maps.Polygon({
+            paths: polygonCoords,
+            strokeColor: "#0000ff",
+            strokeOpacity: 0.5,
+            strokeWeight: 1,
+            fillColor: "#0000ff",
+            fillOpacity: 0.35
+        });
+        rectangle.setMap(map);
+    }   
+    for(let i=0; i < data00.length; i++){
+        let polygonCoords = []
+        for(let j = 0; j < data00[i].length; j++){
+            polygonCoords.push({ lat: data00[i][j][1], lng: data00[i][j][0]})
+            
         }
-        // var rectangle = new maps.Polygon({
-        //     paths: rectangleCoords,
-        //     strokeColor: "#FF0000",
-        //     strokeOpacity: 0,
-        //     strokeWeight: 0,
-        //     fillColor: "#FF0000",
-        //     fillOpacity: 0.35
-        // });
-        // rectangle.setMap(map);
-    }
+        var rectangle = new maps.Polygon({
+            paths: polygonCoords,
+            strokeColor: "#bf00ff",
+            strokeOpacity: 0.5,
+            strokeWeight: 1,
+            fillColor: "#bf00ff",
+            fillOpacity: 0.35
+        });
+        rectangle.setMap(map);
+    }   
 }
 
 export default function Map(){
