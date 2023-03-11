@@ -1,1 +1,14 @@
 *.csv
+agni/cali_data/
+agni/models/
+agni/preprocessing_cali/google-cloud-sdk/
+agni/preprocessing_cali/dead_processes/
+agni/preprocessing_cali/preprocessed_data/
+agni/preprocessing_cali/preprocessed_data_fire_only/
+agni/preprocessing_cali/preprocessed_data_temp/
+agni/preprocessing_cali/preprocessed_eval_data/
+agni/preprocessing_cali/preprocessed_eval_data_2021_05_to_08/
+agni/preprocessing_cali/preprocessed_test_data/
+agni/preprocessing_cali/google-cloud-cli-418.0.0-linux-x86_64.tar.gz
+agni/preprocessing_scripts/
+agni/pygdal/
