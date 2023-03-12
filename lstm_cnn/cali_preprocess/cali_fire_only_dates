@@ -1,0 +1,56 @@
+Run the fire_only script with these dates to get all the fire data used
+
+Period start is included while period end is excluded as per Google Earth Engine API
+
+period_start = '2017-06-01'
+period_end = '2017-06-28'
+
+period_start = '2017-07-01'
+period_end = '2017-07-30'
+
+period_start = '2017-08-01'
+period_end = '2017-08-30'
+
+period_start = '2017-09-01'
+period_end = '2017-09-30'
+
+period_start = '2019-04-01'
+period_end = '2019-04-28'
+
+period_start = '2019-05-01'
+period_end = '2019-05-30'
+
+period_start = '2019-06-01'
+period_end = '2019-06-30'
+
+period_start = '2019-07-01'
+period_end = '2019-07-30'
+
+period_start = '2020-08-01'
+period_end = '2020-08-30'
+
+period_start = '2020-09-01'
+period_end = '2020-09-30'
+
+period_start = '2020-10-01'
+period_end = '2020-10-30'
+
+period_start = '2020-05-01'
+period_end = '2020-05-30'
+
+period_start = '2020-06-01'
+period_end = '2020-06-30'
+
+period_start = '2020-07-01'
+period_end = '2020-07-30'
+
+period_start = '2019-09-01'
+period_end = '2019-09-30'
+
+period_start = '2019-10-01'
+period_end = '2019-10-30'
+
+period_start = '2019-11-01'
+period_end = '2019-11-30'
+
+

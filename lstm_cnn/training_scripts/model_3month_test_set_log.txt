@@ -1,0 +1,23 @@
+Total number of instances in test set : 128702
+
+Number of fire in test set : 319
+
+True positive number(fire and predicted fire) : 123
+
+True negative number : 116102
+
+False positive number : 12281
+
+False negative number : 196
+
+Percentage correctly predicted : 0.8962946339517255
+
+For fire instances, average difference(real label - prediction) : 0.1832137663080868
+
+For non fire instances, average difference : 0.20238359949008933
+
+Script start time : 2023-02-16 18:23:55.918868
+
+Training completion time : 2023-02-19 04:34:03.463723
+
+Script end time : 2023-02-19 05:55:23.569790
