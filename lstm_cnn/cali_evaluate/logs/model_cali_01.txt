@@ -1,0 +1,45 @@
+Total number of instances in test set : 43732
+Number of fire in test set : 600
+True positive number(fire and predicted fire) : 63
+True negative number : 42241
+False positive number : 891
+False negative number : 537
+Percentage correctly predicted : 0.9673465654440684
+For fire instances, average difference(real label - prediction) : 0.5068882253964743
+For non fire instances, average difference : 0.11820656498567671
+Total number of instances in test set : 43732
+Number of fire in test set : 600
+True positive number(fire and predicted fire) : 63
+True negative number : 42241
+False positive number : 891
+False negative number : 537
+Percentage correctly predicted : 0.9673465654440684
+For fire instances, average difference(real label - prediction) : 0.5068882259925207
+For non fire instances, average difference : 0.11820656462557858
+Total number of instances in test set : 43732
+Number of fire in test set : 600
+True positive number(fire and predicted fire) : 63
+True negative number : 42241
+False positive number : 891
+False negative number : 537
+Percentage correctly predicted : 0.9673465654440684
+For fire instances, average difference(real label - prediction) : 0.5068882259925207
+For non fire instances, average difference : 0.11820656462557858
+Total number of instances in test set : 43732
+Number of fire in test set : 600
+True positive number(fire and predicted fire) : 63
+True negative number : 42241
+False positive number : 891
+False negative number : 537
+Percentage correctly predicted : 0.9673465654440684
+For fire instances, average difference(real label - prediction) : 0.5068882259925207
+For non fire instances, average difference : 0.11820656462557858
+Total number of instances in test set : 43732
+Number of fire in test set : 600
+True positive number(fire and predicted fire) : 63
+True negative number : 42241
+False positive number : 891
+False negative number : 537
+Percentage correctly predicted : 0.9673465654440684
+For fire instances, average difference(real label - prediction) : 0.5068882259925207
+For non fire instances, average difference : 0.11820656462557858

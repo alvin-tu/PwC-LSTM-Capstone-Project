@@ -1,0 +1,9 @@
+Total number of instances in test set : 52173
+Number of fire in test set : 627
+True positive number(fire and predicted fire) : 530
+True negative number : 37768
+False positive number : 13778
+False negative number : 97
+Percentage correctly predicted : 0.7340578460123052
+For fire instances, average difference(real label - prediction) : 0.0730309512436485
+For non fire instances, average difference : 0.34546867613730825
